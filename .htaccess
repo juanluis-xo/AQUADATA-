@@ -1,0 +1,27 @@
+# Habilitar reescritura de URLs
+RewriteEngine On
+
+# Permitir acceso a archivos estáticos
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# Configuración PHP
+php_flag display_errors On
+php_value error_reporting E_ALL
+
+# Habilitar CORS para desarrollo
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+    Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
+    Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+</IfModule>
+
+# Configuración de tipos MIME
+AddType application/json .json
+AddType text/html .html
+AddType text/css .css
+AddType application/javascript .js
+
+# Configuración de índice
+DirectoryIndex index.html index.php

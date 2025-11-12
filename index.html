@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaData - Agua limpia y saneamiento para todos</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Navbar mejorado con menú hamburguesa y enlace de Encuestas -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+               <img src="./img/aquadata.png" alt="Descripción de la imagen" width="50" height="60">
+                <span class="logo-text">AquaData</span>
+            </div>
+            
+            <button class="hamburger" id="hamburger" aria-label="Menú">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="aula-virtual.html">Aula Virtual</a></li>
+                <li><a href="foro.html">Foro</a></li>
+                <li><a href="encuestas.html">Encuestas</a></li>
+                <!-- Removed Retos del Mes navigation link -->
+                <li class="nav-auth-item">
+                    <button class="btn-login" id="loginButton" onclick="window.location.href='login.html'" style="display: block;">Login</button>
+                    <div class="user-menu" id="userMenu" style="display: none;">
+                        <button class="btn-user" id="userButton">
+                            <span id="userName"></span>
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 11L3 6h10l-5 5z"/>
+                            </svg>
+                        </button>
+                        <div class="user-dropdown" id="userDropdown">
+                            <button onclick="handleLogout()">Cerrar Sesión</button>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        
+
+    <section class="hero">
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Agua limpia y saneamiento para todos</h1>
+                <button class="btn-primary" onclick="window.location.href='encuestas.html'">Comienza ahora</button>
+            </div>
+            <div class="hero-image">
+                <img src="img/ods6.png" alt="Ilustración agua limpia">
+            </div>
+        </div>
+    </section>
+    
+        <section class="info-section">
+            <div class="container">
+                <div class="info-card">
+                    <h2 class="info-title">¿Quiénes somos?</h2>
+        <p>
+            Somos <strong>AquaData</strong>, una plataforma educativa digital creada en la Universidad Cooperativa de Colombia 
+            por estudiantes de Ingeniería de Sistemas. Nuestro objetivo es aportar a la gestión sostenible del agua a través 
+            de la educación, la innovación y la participación comunitaria.
+        </p>
+         <h2 class="info-title">¿Para qué sirve nuestra web?</h2>
+        <p>
+            Nuestra plataforma está diseñada para <strong>conectar el conocimiento con la acción</strong> en torno al 
+            <strong>ODS 6: Agua limpia y saneamiento</strong>. Aquí podrás:
+        </p>
+        <ul class="info-list">
+            <li>Acceder a un aula virtual con contenidos prácticos sobre gestión del agua.</li>
+            <li>Participar en foros y retos ambientales que promueven la innovación y la colaboración.</li>
+            <li>Conectar con empresas y proyectos que impulsan soluciones sostenibles.</li>
+            <li>Obtener certificados digitales que validan tu aprendizaje y compromiso ambiental.</li>
+        </ul>
+
+
+
+
+                    <h2 class="info-title">Información sobre el ODS 6: Agua y Saneamiento</h2>
+                    <div class="info-content">
+                        <p class="info-text">
+                            El Objetivo de Desarrollo Sostenible 6 busca garantizar la disponibilidad y la gestión sostenible 
+                            del agua y el saneamiento para todas las personas.
+                        </p>
+                        <div class="info-details">
+                            <h3>Metas principales del ODS 6:</h3>
+                            <ul class="info-list">
+                                <li><strong>Acceso universal al agua potable:</strong> Lograr el acceso universal y equitativo al agua potable segura y asequible para todos.</li>
+                                <li><strong>Saneamiento e higiene:</strong> Lograr el acceso a servicios de saneamiento e higiene adecuados y equitativos para todos.</li>
+                                <li><strong>Calidad del agua:</strong> Mejorar la calidad del agua reduciendo la contaminación, eliminando el vertimiento y minimizando la emisión de productos químicos y materiales peligrosos.</li>
+                                <li><strong>Uso eficiente:</strong> Aumentar considerablemente el uso eficiente de los recursos hídricos en todos los sectores.</li>
+                                <li><strong>Gestión integrada:</strong> Implementar la gestión integrada de los recursos hídricos a todos los niveles.</li>
+                                <li><strong>Protección de ecosistemas:</strong> Proteger y restablecer los ecosistemas relacionados con el agua, incluidos los bosques, las montañas, los humedales, los ríos, los acuíferos y los lagos.</li>
+                            </ul>
+                            
+                            <h3>Datos importantes:</h3>
+                            <ul class="info-list">
+                                <li>2.200 millones de personas carecen de acceso a servicios de agua potable gestionados de forma segura.</li>
+                                <li>4.200 millones de personas carecen de servicios de saneamiento gestionados de forma segura.</li>
+                                <li>El 80% de las aguas residuales resultantes de actividades humanas se vierten en los ríos o el mar sin ningún tratamiento.</li>
+                                <li>Más del 80% de las aguas residuales generadas por la sociedad vuelven al ecosistema sin ser tratadas o reutilizadas.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container">
+                <h2 class="section-title">¿Qué ofrece AquaData?</h2>
+                <div class="features-grid">
+                    <div class="feature-card" onclick="window.location.href='aula-virtual.html'" style="cursor: pointer;">
+                        <div class="feature-icon">📚</div>
+                        <h3>Aula Virtual</h3>
+                        <p>Accede a contenido educativo sobre gestión sostenible del agua</p>
+                    </div>
+                    <div class="feature-card" onclick="window.location.href='foro.html'" style="cursor: pointer;">
+                        <div class="feature-icon">💬</div>
+                        <h3>Foros Colaborativos</h3>
+                        <p>Participa en discusiones con estudiantes y profesores</p>
+                    </div>
+                    <!-- Removed Retos Mensuales feature card -->
+                    <div class="feature-card" onclick="openChat()" style="cursor: pointer;">
+                        <div class="feature-icon">🤖</div>
+                        <h3>Asistente IA</h3>
+                        <p>Obtén respuestas instantáneas sobre el ODS 6</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="20" cy="20" r="20" fill="#0088CC"/>
+                            <path d="M20 10C17 10 15 13 15 16C15 19 17 21 20 25C23 21 25 19 25 16C25 13 23 10 20 10Z" fill="white"/>
+                        </svg>
+                        <span class="logo-text">AquaData</span>
+                    </div>
+                    <p class="footer-description">Plataforma educativa para promover la gestión sostenible del agua y el ODS 6.</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="aula-virtual.html">Aula Virtual</a></li>
+                        <li><a href="foro.html">Foro</a></li>
+                        <!-- Removed Retos del Mes footer link -->
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul class="footer-links">
+                        <li><a href="encuestas.html">Encuestas</a></li>
+                        <li><a href="login.html">Iniciar Sesión</a></li>
+                        <li><a href="registro.html">Registrarse</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Sobre el ODS 6</h4>
+                    <ul class="footer-links">
+                        <li><a href="https://www.un.org/sustainabledevelopment/es/water-and-sanitation/" target="_blank">Naciones Unidas</a></li>
+                        <li><a href="https://www.who.int/es/news-room/fact-sheets/detail/drinking-water" target="_blank">OMS - Agua Potable</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 AquaData. Todos los derechos reservados. | Plataforma educativa para el ODS 6</p>
+            </div>
+        </div>
+    </footer>
+
+    <button class="chat-button" onclick="openChat()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M20 2H4C2.9 2 2 2.9 2 4V22L6 18H20C21.1 18 22 17.1 22 16V4C22 2.9 21.1 2 20 2Z" fill="white"/>
+        </svg>
+        Chat con IA
+    </button>
+
+    <div id="chatModal" class="modal">
+        <div class="modal-content chat-modal">
+            <div class="modal-header">
+                <h3>Chat con IA - Asistente AquaData</h3>
+                <button class="close-button" onclick="closeChat()">&times;</button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot-message">
+                    <p>¡Hola! Soy tu asistente virtual de AquaData. ¿En qué puedo ayudarte hoy?</p>
+                </div>
+            </div>
+            <div class="chat-input-container">
+                <input type="text" id="chatInput" placeholder="Escribe tu mensaje..." onkeypress="handleChatKeyPress(event)">
+                <button class="btn-send" onclick="sendMessage()">Enviar</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

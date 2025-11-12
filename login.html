@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - AquaData</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <div class="logo" onclick="window.location.href='index.html'" style="cursor: pointer;">
+                <img src="./img/aquadata.png" alt="Descripción de la imagen" width="50" height="60">
+                <span class="logo-text">AquaData</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="auth-main">
+        <div class="auth-container">
+            <div class="auth-card">
+                <h2 class="auth-title">Iniciar Sesión</h2>
+                <form id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Contraseña</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <div id="loginError" class="error-message"></div>
+                    <button type="submit" class="btn-primary btn-full">Iniciar Sesión</button>
+                </form>
+                <p class="auth-link">
+                    ¿No tienes cuenta? <a href="registro.html">Regístrate aquí</a>
+                </p>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/auth.js"></script>
+</body>
+</html>
