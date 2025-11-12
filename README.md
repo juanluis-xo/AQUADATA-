@@ -28,11 +28,9 @@ Password: password
 - Aula virtual con noticias
 - Foro de discusión
 - Encuestas sobre ODS 6
-- Retos mensuales
 - Chat con IA (simulado)
 
 ## Autores
 - Juan Luis De La Espriella Pereira 
 - Jhon Garrido Guzman
 - Joan Cordoba 
-- JJBP
